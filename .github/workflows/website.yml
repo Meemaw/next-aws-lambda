@@ -38,13 +38,14 @@ jobs:
           fetch-depth: 1
       - name: Install packages
         run: |
-          sudo npm ci
+          sudo su
+          npm ci
       - name: Run Next.js
         run: |
-          sudo npm run dev 2>&1 > /dev/null &
+          npm run dev 2>&1 > /dev/null &
       - name: Run Testcafe
         run: |
-          sudo npm run test:e2e:headless
+          npm run test:e2e:headless
 
   deploy:
     name: Deploy website to AWS
