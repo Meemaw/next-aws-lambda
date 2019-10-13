@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "serverless --verbose",
+    "deploy": "serverless --verbose --aws-s3-accelerate",
     "test": "npm run test:unit",
     "test:unit": "jest",
     "test:e2e": "testcafe chrome e2e/specs",
