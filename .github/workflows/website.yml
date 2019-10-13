@@ -35,7 +35,7 @@ jobs:
       - name: Install packages
         run: |
           npm ci
-      - uses: Meemaw/testcafe-action@v0.0.2
+      - uses: Meemaw/testcafe-action@v0.0.3
         with:
           args: 'chrome:headless e2e/specs'
 
