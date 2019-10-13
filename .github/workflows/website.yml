@@ -41,7 +41,7 @@ jobs:
           sudo npm ci
       - name: Run Next.js
         run: |
-          sudo sh -c "npm run dev 2>&1 > /dev/null &"
+          sudo npm run dev:background
       - name: Run Testcafe
         run: |
           npm run test:e2e:headless

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:background": "npm run dev 2>&1 > /dev/null &",
     "build": "next build",
     "start": "next start",
     "deploy": "serverless --verbose --no-aws-s3-accelerate",
