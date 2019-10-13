@@ -38,8 +38,7 @@ jobs:
           npm ci
       - name: Run Next.js
         run: |
-          npm run dev 2>&1 > /dev/null &
-          sleep 10 & curl http://localhost:3000
+          npm run dev
       - uses: ./.github/actions/testcafe
         with:
           args: 'chrome:headless e2e/specs'
