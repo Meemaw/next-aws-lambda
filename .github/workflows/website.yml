@@ -32,6 +32,12 @@ jobs:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
+      - name: Install packages
+        run: |
+          npm ci
+      - name: Run Next.js
+        run: |
+          npm run dev 2>&1 > /dev/null &
       - uses: Meemaw/testcafe-action@v0.0.3
         with:
           args: 'chrome:headless e2e/specs'
