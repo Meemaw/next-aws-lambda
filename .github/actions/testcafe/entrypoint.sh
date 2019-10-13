@@ -6,4 +6,4 @@ echo "$(ls)"
 echo "$*"
 echo "$INPUT_ARGS"
 
-sh -c "npx testcafe $*"
+sh -c "sudo npx testcafe $*"
