@@ -29,9 +29,6 @@ jobs:
     name: E2E test website with Testcafe
     runs-on: ubuntu-latest
 
-    container:
-      image: circleci/node:10.14-browsers
-
     steps:
       - uses: actions/checkout@v1
         with:
@@ -43,6 +40,8 @@ jobs:
         run: |
           npm run dev 2>&1 > /dev/null &
       - name: Run Testcafe
+        container:
+          image: circleci/node:10.14-browsers
         run: |
           npm run test:e2e:headless
 
