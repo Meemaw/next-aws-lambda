@@ -16,6 +16,7 @@ jobs:
       - name: npm install, lint and unit test
         run: |
           npm ci
+          npm run lint
           npm run test:unit -- --coverage
         env:
           CI: true
