@@ -32,7 +32,8 @@ jobs:
     services:
       nextjs:
         image: Dockerfile
-        ports: 3000:3000
+        ports:
+          - 3000:3000
 
     steps:
       - uses: actions/checkout@v1
