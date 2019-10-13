@@ -18,4 +18,4 @@ For deployment [serverless-next component](https://github.com/danielcondemarin/s
 
 ##### Demo
 
-Demo available [here](https://d2zvkm1wvztbx5.cloudfront.net/).
+Demo available [here](http://d3e3ak8beoltd2.cloudfront.net/).
