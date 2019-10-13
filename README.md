@@ -14,7 +14,7 @@ Minimal starter boilerplate project for [Next.js](https://nextjs.org/).
 
 ##### Deployment
 
-Using great [serverless-next component](https://github.com/danielcondemarin/serverless-next.js/tree/master/packages/serverless-nextjs-component) to achieve a zero configuration Nextjs 9.0 [serverless component](https://github.com/serverless-components/) with full feature parity.
+For deployment [serverless-next component](https://github.com/danielcondemarin/serverless-next.js/tree/master/packages/serverless-nextjs-component) is used to achieve a zero configuration Nextjs 9.0 [serverless component](https://github.com/serverless-components/) with full feature parity.
 
 ##### Demo
 
