@@ -1,7 +1,16 @@
 {
   "name": "next-aws-lambda",
   "version": "0.0.0-development",
-  "private": true,
+  "description": "Minimal starter boilerplate project for Serverless Next.js on AWS Lambda",
+  "license": "MIT",
+  "author": "Meemaw <ematej.snuderl@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Meemaw/next-aws-lambda"
+  },
+  "bugs": {
+    "url": "https://github.com/Meemaw/next-aws-lambda/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
