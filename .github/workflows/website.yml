@@ -38,7 +38,7 @@ jobs:
       - name: Run Next.js
         run: |
           npm run dev 2>&1 > /dev/null &
-      - uses: Meemaw/testcafe-action@v0.0.3
+      - uses: ./.github/actions/testcafe
         with:
           args: 'chrome:headless e2e/specs'
 

@@ -1,0 +1,9 @@
+name: 'testcafe-action'
+description: 'Github actions that executes testcafe inside container that has all popular browsers pre-installed'
+inputs:
+  args:
+    description: 'Arguments that will be passed to testcafe CLI'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
