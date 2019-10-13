@@ -6,14 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "serverless --verbose --aws-s3-accelerate",
+    "deploy": "serverless --verbose",
     "test": "npm run test:unit",
     "test:unit": "jest",
     "test:e2e": "testcafe chrome e2e/specs",
     "test:e2e:headless": "testcafe chrome:headless e2e/specs",
     "lint": "concurrently \"npm run prettier\" \"npm run eslint\"",
     "eslint": "eslint --max-warnings 0 --ext .ts 'src/**/*' 'e2e/**/*'",
-    "prettier": "prettier -l 'src/**/*'"
+    "prettier": "prettier -l 'src/**/*' 'e2e/**/*'"
   },
   "dependencies": {
     "aws-serverless-express": "^3.3.6",
