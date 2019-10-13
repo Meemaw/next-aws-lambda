@@ -1,0 +1,21 @@
+name: Application
+on: [push]
+
+jobs:
+  test:unit:
+    name: Unit tests on node 12.x
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: npm install, lint and unit test
+        run: |
+          npm ci
+          npm run test:unit
+        env:
+          CI: true
