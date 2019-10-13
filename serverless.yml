@@ -3,4 +3,4 @@ name: next-aws-lambda
 website:
   component: serverless-next.js
   inputs:
-    bucketName: next-aws-lambda-static
+    bucketName: ${env.NEXT_AWS_LAMBDA_BUCKET}
