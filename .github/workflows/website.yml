@@ -36,6 +36,8 @@ jobs:
         run: |
           npm ci
       - uses: Meemaw/testcafe-action@v0.0.1
+        with:
+          args: 'chrome:headless e2e/specs'
 
   deploy:
     name: Deploy website to AWS
