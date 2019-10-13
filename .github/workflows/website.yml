@@ -38,11 +38,10 @@ jobs:
           fetch-depth: 1
       - name: Install packages
         run: |
-          sudo su
-          npm ci
+          sudo npm ci
       - name: Run Next.js
         run: |
-          npm run dev 2>&1 > /dev/null &
+          sudo sh -c "npm run dev 2>&1 > /dev/null &"
       - name: Run Testcafe
         run: |
           npm run test:e2e:headless
