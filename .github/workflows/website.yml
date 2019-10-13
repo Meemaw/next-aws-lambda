@@ -35,7 +35,7 @@ jobs:
       - name: Install pckages
         run: |
           npm ci
-      - uses: Meemaw/testcafe-action@v0.0.1
+      - uses: Meemaw/testcafe-action@v0.0.2
         with:
           args: 'chrome:headless e2e/specs'
 
