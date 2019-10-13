@@ -29,25 +29,19 @@ jobs:
     name: E2E test website with Testcafe
     runs-on: ubuntu-latest
 
-    container:
-      image: circleci/node:10.14-browsers
-
     steps:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
       - name: Install packages
         run: |
           npm ci
       - name: Run Next.js
         run: |
-          npm run dev:background
-      - name: Run Testcafe
-        run: |
-          npm run test:e2e:headless
+          npm run dev 2>&1 > /dev/null &
+      - uses: ./.github/actions/testcafe
+        with:
+          args: 'chrome:headless e2e/specs'
 
   deploy:
     name: Deploy website to AWS
