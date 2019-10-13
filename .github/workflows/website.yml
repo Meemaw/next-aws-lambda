@@ -29,11 +29,8 @@ jobs:
     name: E2E test website with Testcafe
     runs-on: ubuntu-latest
 
-    services:
-      nextjs:
-        image: Dockerfile
-        ports:
-          - 3000:3000
+    container:
+      image: circleci/node:10.14-browsers
 
     steps:
       - uses: actions/checkout@v1
@@ -42,11 +39,12 @@ jobs:
       - name: Install packages
         run: |
           npm ci
-      - uses: ./.github/actions/testcafe
-        with:
-          args: 'chrome:headless e2e/specs'
-        env:
-          BASE_URL: http://nextjs:${{ job.services.nextjs.ports[3000] }}/
+      - name: Run Next.js
+        run: |
+          npm run dev 2>&1 > /dev/null &
+      - name: Run Testcafe
+        run: |
+          npm run test:e2e:headless
 
   deploy:
     name: Deploy website to AWS
