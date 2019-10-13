@@ -2,7 +2,7 @@ name: Application
 on: [push]
 
 jobs:
-  test:unit:
+  test_unit:
     name: Unit tests on node 12.x
     runs-on: ubuntu-latest
 
