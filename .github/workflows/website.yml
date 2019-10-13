@@ -39,7 +39,7 @@ jobs:
       - name: Run Next.js
         run: |
           npm run dev 2>&1 > /dev/null &
-          node_modules/wait-on/bin/wait-on http-get://localhost:3000 --timeout 60000
+          node_modules/wait-on/bin/wait-on http-get://localhost:3001 --timeout 60000
       - uses: ./.github/actions/testcafe
         with:
           args: 'chrome:headless e2e/specs'
