@@ -1,4 +1,6 @@
-myNextApplication:
+name: next-aws-lambda
+
+website:
   component: serverless-next.js
   inputs:
     bucketName: next-aws-lambda-static
