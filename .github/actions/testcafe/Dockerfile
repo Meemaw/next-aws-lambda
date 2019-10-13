@@ -1,0 +1,12 @@
+FROM circleci/node:10.14-browsers
+
+LABEL "com.github.actions.name"="testcafe"
+LABEL "com.github.actions.description"="Runs testcafe inside container that has all popular browsers pre-installed"
+LABEL "com.github.actions.icon"="terminal"
+LABEL "com.github.actions.color"="purple"
+
+WORKDIR /app
+COPY . /app
+
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
