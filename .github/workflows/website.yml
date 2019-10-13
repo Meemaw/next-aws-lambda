@@ -41,10 +41,10 @@ jobs:
           sudo npm ci
       - name: Run Next.js
         run: |
-          npm run dev 2>&1 > /dev/null &
+          sudo npm run dev 2>&1 > /dev/null &
       - name: Run Testcafe
         run: |
-          npm run test:e2e:headless
+          sudo npm run test:e2e:headless
 
   deploy:
     name: Deploy website to AWS
