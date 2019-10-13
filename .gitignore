@@ -6,3 +6,7 @@ node_modules
 
 # Testing
 coverage
+
+# Serveless
+.serverless
+.serverless_nextjs
