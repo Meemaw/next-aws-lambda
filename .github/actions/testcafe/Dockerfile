@@ -7,7 +7,7 @@ LABEL "com.github.actions.description"="Runs testcafe inside container that has 
 LABEL "com.github.actions.icon"="terminal"
 LABEL "com.github.actions.color"="purple"
 
-COPY e2e /app
+COPY . /app
 WORKDIR /app
 
 COPY entrypoint.sh /entrypoint.sh
