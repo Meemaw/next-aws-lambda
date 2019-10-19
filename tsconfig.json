@@ -15,5 +15,5 @@
     "jsx": "preserve"
   },
   "exclude": ["node_modules", "e2e"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "src"]
 }
