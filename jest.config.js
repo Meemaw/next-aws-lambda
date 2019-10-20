@@ -8,5 +8,6 @@ module.exports = {
       tsConfig: 'tsconfig.jest.json',
     },
   },
+  // Required for absolute imports in Jest
   moduleDirectories: ['node_modules', 'src'],
 };
