@@ -12,7 +12,7 @@ Minimal starter boilerplate project for deploying Serveless [Next.js](https://ne
 - Test coverage using [codecov](https://www.codecov.io/)
 - [Github action](https://github.com/features/actions) workflows for out of the box CI/CD
 - Storybook's Component Story Format integration
-- Absolute path support
+- Absolute import path support
 
 ##### Deployment
 
