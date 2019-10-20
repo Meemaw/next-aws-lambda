@@ -2,7 +2,7 @@
 
 [![Actions Status](https://github.com/Meemaw/next-aws-lambda/workflows/website/badge.svg)](https://github.com/Meemaw/next-aws-lambda/actions) [![codecov](https://codecov.io/gh/Meemaw/next-aws-lambda/branch/master/graph/badge.svg)](https://codecov.io/gh/Meemaw/next-aws-lambda) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Open source: open-source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 
-Minimal starter boilerplate project for deploying Serveless [Next.js](https://nextjs.org/) to AWS Lambda.
+Minimal starter boilerplate project for deploying Serveless [Next.js](https://nextjs.org/) to AWS Lambda@Edge.
 
 - Supports Next.js **v9.x**
 - Using `./src` as the source root directory
@@ -11,6 +11,8 @@ Minimal starter boilerplate project for deploying Serveless [Next.js](https://ne
 - Linting with [prettier](https://prettier.io/) and [eslint](https://eslint.org/)
 - Test coverage using [codecov](https://www.codecov.io/)
 - [Github action](https://github.com/features/actions) workflows for out of the box CI/CD
+- Storybook's Component Story Format integration
+- Absolute path support
 
 ##### Deployment
 
