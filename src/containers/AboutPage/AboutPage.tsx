@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
+import AboutUs from 'components/AboutUs';
+
 const About: React.FC = () => {
   return (
     <>
@@ -13,8 +15,7 @@ const About: React.FC = () => {
         <li>About Us</li>
       </ul>
 
-      <h1>About</h1>
-      <p>We are a cool company.</p>
+      <AboutUs />
     </>
   );
 };
