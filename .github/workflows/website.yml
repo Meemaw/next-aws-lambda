@@ -41,6 +41,7 @@ jobs:
           npm ci
       - name: Run Next.js
         run: |
+          echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
           npm run dev 2>&1 > /dev/null &
           node_modules/wait-on/bin/wait-on http-get://localhost:3000 --timeout 60000
       - uses: DevExpress/testcafe-action@latest
