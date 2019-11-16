@@ -1,7 +1,16 @@
 {
   "name": "next-aws-lambda",
   "version": "0.0.0-development",
-  "private": true,
+  "description": "Minimal starter boilerplate project for Serverless Next.js on AWS Lambda",
+  "license": "MIT",
+  "author": "Meemaw <ematej.snuderl@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Meemaw/next-aws-lambda"
+  },
+  "bugs": {
+    "url": "https://github.com/Meemaw/next-aws-lambda/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "dev:background": "npm run dev 2>&1 > /dev/null &",
@@ -13,40 +22,44 @@
     "test:e2e": "testcafe chrome e2e/specs",
     "test:e2e:headless": "testcafe chrome:headless e2e/specs",
     "lint": "concurrently \"npm run prettier\" \"npm run eslint\"",
-    "eslint": "eslint --max-warnings 0 --ext .ts 'src/**/*' 'e2e/**/*'",
-    "prettier": "prettier -l 'src/**/*' 'e2e/**/*'"
+    "eslint": "eslint --max-warnings 0 'src/**/*.{ts,tsx}' 'e2e/**/*.{ts,tsx}'",
+    "prettier": "prettier -l 'src/**/*' 'e2e/**/*'",
+    "storybook": "start-storybook"
   },
   "dependencies": {
     "aws-serverless-express": "^3.3.6",
-    "next": "^9.1.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "next": "^9.1.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^4.1.2",
-    "@testing-library/react": "^9.3.0",
+    "@storybook/react": "^5.2.6",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
     "@testing-library/testcafe": "^3.3.0",
-    "@types/aws-serverless-express": "^3.3.1",
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.12",
-    "@types/react": "^16.9.5",
-    "@typescript-eslint/eslint-plugin": "^2.3.3",
-    "@typescript-eslint/parser": "^2.3.3",
+    "@types/aws-serverless-express": "^3.3.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.8",
+    "@types/react": "^16.9.11",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "awesome-typescript-loader": "^5.2.1",
     "concurrently": "^5.0.0",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-testcafe": "^0.2.1",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2",
-    "serverless": "^1.54.0",
-    "serverless-next.js": "^1.4.0",
+    "prettier": "^1.19.1",
+    "serverless": "^1.57.0",
+    "serverless-next.js": "^1.5.0",
     "serverless-offline": "^5.12.0",
-    "testcafe": "^1.5.0",
+    "testcafe": "^1.6.0",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4",
-    "wait-on": "^3.3.0"
+    "wait-on": "^3.3.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.6.4"
   },
   "husky": {
     "hooks": {
