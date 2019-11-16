@@ -43,7 +43,7 @@ jobs:
         run: |
           npm run dev 2>&1 > /dev/null &
           node_modules/wait-on/bin/wait-on http-get://localhost:3000 --timeout 60000
-      - uses: ./.github/actions/testcafe
+      - uses: DevExpress/testcafe-action@latest
         with:
           args: 'chrome:headless e2e/specs'
 
