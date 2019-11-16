@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   test_unit:
-    name: Unit tests on node 12.x
+    name: Unit tests
     runs-on: ubuntu-latest
 
     steps:
@@ -25,10 +25,33 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
+  test_e2e:
+    name: E2E tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Install packages
+        run: |
+          npm ci
+      - name: Run Next.js
+        run: |
+          echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+          npm run dev 2>&1 > /dev/null &
+          node_modules/wait-on/bin/wait-on http-get://localhost:3000 --timeout 60000
+      - uses: DevExpress/testcafe-action@latest
+        with:
+          args: 'chrome:headless e2e/specs'
+
   deploy:
     name: Deploy website to AWS
     runs-on: ubuntu-latest
-    needs: [test_unit]
+    needs: [test_unit, test_e2e]
     if: github.ref == 'refs/heads/master'
 
     steps:
