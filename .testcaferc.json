@@ -1,4 +1,16 @@
 {
   "quarantineMode": true,
+  "skipJsErrors": true,
+  "concurrency": 2,
+  "screenshots": {
+    "takeOnFails": true,
+    "pathPattern": "${USERAGENT}/${FIXTURE}/${TEST}-${QUARANTINE_ATTEMPT}.png",
+    "path": "artifacts/screenshots/"
+  },
+  "videoPath": "artifacts/videos/",
+  "videoOptions": {
+    "failedOnly": true,
+    "pathPattern": "${USERAGENT}/${FIXTURE}/${TEST}-${QUARANTINE_ATTEMPT}.mp4"
+  },
   "clientScripts": ["./node_modules/@testing-library/dom/dist/@testing-library/dom.umd.js"]
 }

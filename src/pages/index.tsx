@@ -2,7 +2,7 @@ import React from 'react';
 
 import HomePage from '../containers/HomePage';
 
-const Home: React.FC = () => {
+const Home = () => {
   return <HomePage />;
 };
 
