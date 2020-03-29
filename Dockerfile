@@ -1,13 +1,13 @@
-FROM node:12-alpine as build
+FROM node:13-alpine as build
 
 COPY . /src
 WORKDIR /src
 
-RUN npm ci
-RUN npm run build
-RUN npm prune --production
+RUN yarn install --frozen-lockfile
+RUN yarn build
+RUN yarn install --frozen-lockfile --production --ignore-scripts --prefer-offline
 
-FROM node:12-alpine
+FROM node:13-alpine
 
 WORKDIR /usr/app
 

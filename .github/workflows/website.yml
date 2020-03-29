@@ -15,9 +15,9 @@ jobs:
           node-version: '12.x'
       - name: npm install, lint and unit test
         run: |
-          npm ci
-          npm run lint
-          npm run test:unit -- --coverage
+          yarn install --frozen-lockfile
+          yarn lint
+          yarn test:unit -- --coverage
         env:
           CI: true
       - name: Upload coverage to Codecov
@@ -42,7 +42,7 @@ jobs:
       - name: Run Next.js
         run: |
           echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-          npm run dev 2>&1 > /dev/null &
+          yarn dev 2>&1 > /dev/null &
           node_modules/wait-on/bin/wait-on http-get://localhost:3000 --timeout 60000
       - uses: DevExpress/testcafe-action@latest
         with:
@@ -70,4 +70,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           WEBSITE_BUCKET: ${{ secrets.WEBSITE_BUCKET }}
         run: |
-          npm run deploy
+          yarn deploy
