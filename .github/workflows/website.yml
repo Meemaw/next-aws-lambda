@@ -67,7 +67,7 @@ jobs:
           mkdir -p $ARTIFACTS_PATH
           yarn start 2>&1 | tee $ARTIFACTS_PATH/serve.log &
           node_modules/wait-on/bin/wait-on http-get://localhost:3000 --timeout 60000
-     - name: test:e2e
+      - name: test:e2e
         run: |
           mkdir -p $ARTIFACTS_PATH/screenshots
           mkdir -p $ARTIFACTS_PATH/videos
