@@ -1,16 +1,13 @@
 import React from 'react';
-import Link from 'next/link';
-
 import AboutUs from 'components/AboutUs';
+import Link from 'components/Link';
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <>
       <ul>
         <li>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
+          <Link to="/">Home</Link>
         </li>
         <li>About Us</li>
       </ul>
