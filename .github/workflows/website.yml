@@ -3,7 +3,6 @@ on: [push]
 
 env:
   CI: true
-  ARTIFACTS_PATH: artifacts/
 
 jobs:
   unit_tests:
@@ -36,9 +35,10 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
-  test_e2e:
-    name: E2E tests
+  e2e_tests:
     runs-on: ubuntu-latest
+    env:
+      ARTIFACTS_PATH: artifacts/
 
     steps:
       - uses: actions/checkout@v1
@@ -60,9 +60,9 @@ jobs:
       - name: Install packages
         run: |
           yarn install --frozen-lockfile
-      - name: build
+      - name: build application
         run: yarn build
-      - name: Run Next.js
+      - name: start application
         run: |
           mkdir -p $ARTIFACTS_PATH
           yarn start 2>&1 | tee $ARTIFACTS_PATH/serve.log &
@@ -79,9 +79,8 @@ jobs:
           path: artifacts
 
   deploy:
-    name: Deploy website to AWS
     runs-on: ubuntu-latest
-    needs: [test_unit, test_e2e]
+    needs: [unit_tests, e2e_tests]
     if: github.ref == 'refs/heads/master'
 
     steps:
