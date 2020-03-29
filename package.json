@@ -33,6 +33,7 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "@storybook/addon-actions": "^5.3.17",
     "@storybook/preset-typescript": "^3.0.0",
     "@storybook/react": "^5.3.17",
