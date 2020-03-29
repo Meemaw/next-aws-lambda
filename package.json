@@ -22,7 +22,7 @@
     "test:e2e": "testcafe chrome e2e/specs",
     "test:e2e:headless": "testcafe chrome:headless e2e/specs",
     "lint": "concurrently \"yarn prettier\" \"yarn eslint\"",
-    "eslint": "eslint --max-warnings 0 'src/**/*.{ts,tsx}' 'e2e/**/*.{ts,tsx}'",
+    "eslint": "eslint --max-warnings 0 'src/**/*.{ts,tsx}' 'e2e/**/*.{ts,tsx}' --config .eslintrc.production.js",
     "prettier": "prettier -l 'src/**/*' 'e2e/**/*'",
     "prettier:fix": "prettier -l 'src/**/*' 'e2e/**/*' --write",
     "storybook": "start-storybook"
