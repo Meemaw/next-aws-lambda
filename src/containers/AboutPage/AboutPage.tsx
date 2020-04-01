@@ -3,7 +3,11 @@ import Link from 'next/link';
 
 import AboutUs from 'components/AboutUs';
 
-const About: React.FC = () => {
+type Props = {
+  todos: object;
+};
+
+const About = ({ todos }: Props) => {
   return (
     <>
       <ul>
@@ -16,6 +20,9 @@ const About: React.FC = () => {
       </ul>
 
       <AboutUs />
+
+      <div>TODOS:</div>
+      <div>{JSON.stringify(todos)}</div>
     </>
   );
 };

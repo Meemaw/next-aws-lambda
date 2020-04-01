@@ -6,4 +6,4 @@ export default {
   title: 'AboutPage',
 };
 
-export const Default = () => <AboutPage />;
+export const Default = () => <AboutPage todos={{}} />;

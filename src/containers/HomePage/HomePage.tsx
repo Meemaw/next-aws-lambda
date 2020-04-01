@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
     <>
       <ul>
