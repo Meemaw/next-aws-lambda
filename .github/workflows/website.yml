@@ -3,6 +3,8 @@ on: [push]
 
 env:
   CI: true
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
 jobs:
   unit_tests:
@@ -95,8 +97,6 @@ jobs:
           yarn install --frozen-lockfile
       - name: Deploy
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           WEBSITE_BUCKET: ${{ secrets.WEBSITE_BUCKET }}
         run: |
-          yarn deploy
+          npx serverless

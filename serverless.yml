@@ -1,6 +1,11 @@
 name: next-aws-lambda
 
 website:
-  component: serverless-next.js
+  component: '@sls-next/serverless-component'
   inputs:
     bucketName: ${env.WEBSITE_BUCKET}
+    memory:
+      defaultLambda: 1024
+      apiLambda: 1024
+    cloudfront:
+      comment: 'next-aws-lambda (Managed by @sls-next/serverless-component)'
