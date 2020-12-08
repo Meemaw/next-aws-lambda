@@ -1,11 +1,17 @@
 import React from 'react';
 import ky from 'ky-universal';
 import { GetServerSideProps } from 'next';
+import { AboutPage } from 'containers/AboutPage';
 
-import AboutPage from '../containers/AboutPage';
+export type Todo = {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+};
 
 type Props = {
-  todos: object;
+  todos: Todo[];
 };
 
 const About = ({ todos }: Props) => {
@@ -13,7 +19,9 @@ const About = ({ todos }: Props) => {
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async (_ctx) => {
-  const todos = await ky('https://jsonplaceholder.typicode.com/todos/1').json<object>();
+  const todos = await ky('https://jsonplaceholder.typicode.com/todos/1').json<
+    Todo[]
+  >();
   return { props: { todos } };
 };
 

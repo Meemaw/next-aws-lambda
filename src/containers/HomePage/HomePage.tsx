@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <>
       <ul>
@@ -17,5 +17,3 @@ const HomePage = () => {
     </>
   );
 };
-
-export default HomePage;

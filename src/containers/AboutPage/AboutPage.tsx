@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-
-import AboutUs from 'components/AboutUs';
+import { AboutUs } from 'components/AboutUs';
+import { Todo } from 'pages/about';
 
 type Props = {
-  todos: object;
+  todos: Todo[];
 };
 
-const About = ({ todos }: Props) => {
+export const AboutPage = ({ todos }: Props) => {
   return (
     <>
       <ul>
@@ -26,5 +26,3 @@ const About = ({ todos }: Props) => {
     </>
   );
 };
-
-export default About;
