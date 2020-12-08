@@ -4,7 +4,7 @@
 
 Minimal starter boilerplate project for deploying Serveless [Next.js](https://nextjs.org/) to AWS Lambda@Edge.
 
-- Supports Next.js **v9.x**
+- Supports Next.js **v10.x**
 - Using `./src` as the source root directory
 - Unit testing with [jest](https://jestjs.io/) and [RTL](https://testing-library.com/)
 - E2E testing with [testcafe](https://devexpress.github.io/testcafe/)
