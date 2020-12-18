@@ -20,4 +20,4 @@ For deployment [serverless-next component](https://github.com/serverless-nextjs/
 
 ## Demo
 
-Demo available [here](https://d19x3oz0hl2m6k.cloudfront.net)
+Demo available [here](https://d2922rq9ynjh4y.cloudfront.net)
