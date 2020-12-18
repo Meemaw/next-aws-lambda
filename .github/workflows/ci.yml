@@ -5,6 +5,8 @@ env:
   CI: true
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_S3_STATE_BUCKET: ${{ secrets.AWS_S3_STATE_BUCKET }}
+  PR_NAME: master
 
 jobs:
   unit_tests:
@@ -14,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
       - name: Get yarn cache directory path
@@ -46,7 +48,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
       - name: Get yarn cache directory path
@@ -89,14 +91,13 @@ jobs:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
       - name: Install packages
-        run: |
-          yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
       - name: Deploy
-        env:
-          WEBSITE_BUCKET: ${{ secrets.WEBSITE_BUCKET }}
         run: |
+          aws s3 sync s3://$AWS_S3_STATE_BUCKET/$PR_NAME/.serverless .serverless --delete
           npx serverless
+          aws s3 sync .serverless s3://$AWS_S3_STATE_BUCKET/$PR_NAME/.serverless --delete

@@ -3,7 +3,7 @@ name: next-aws-lambda
 website:
   component: '@sls-next/serverless-component'
   inputs:
-    bucketName: ${env.WEBSITE_BUCKET}
+    bucketName: next-aws-lambda-${PR_NAME}
     memory:
       defaultLambda: 1024
       apiLambda: 1024
