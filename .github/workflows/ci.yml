@@ -5,7 +5,6 @@ env:
   CI: true
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_S3_WEBSITE_BUCKET: ${{ secrets.AWS_S3_WEBSITE_BUCKET }}
   AWS_S3_STATE_BUCKET: ${{ secrets.AWS_S3_STATE_BUCKET }}
   PR_NAME: master
 
