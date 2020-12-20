@@ -9803,10 +9803,10 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-next-page-tester@0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/next-page-tester/-/next-page-tester-0.12.0.tgz#7ed701a93195af2f14db8b561daa7001f0b29fd6"
-  integrity sha512-/nbuwd4ediSWUevhfrLCxWiRUs/ORh6HenzkOaUyDWtwHRzp9wUFDzV/d0GJO/2p/gndWyHw0dkD14hrlEA44w==
+next-page-tester@0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/next-page-tester/-/next-page-tester-0.13.0.tgz#af334be6d1e8fddd8b5f36bb99408bbc702f4235"
+  integrity sha512-EBaIyLyFUGnRHgLuUodg3oXSaidm5gRVX5RhQs0a88xkeTOUY5K4m/jVDHLaOTEY6GGjQ1RiQbIdZ2vYY+yzdA==
   dependencies:
     "@types/express" "^4.17.8"
     fast-glob "^3.2.4"
