@@ -5117,6 +5117,11 @@ cookie@0.4.0:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.0.tgz#beb437e7022b3b6d49019d088665303ebe9c14ba"
   integrity sha512-+Hp8fLp57wnUSt0tY0tHEXh4voZRDnoIrZPqlo3DPiI4y9lwg/jqx+1Om94/W6ZaPDOUbnjOt/99w66zk+l1Xg==
 
+cookie@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.1.tgz#afd713fe26ebd21ba95ceb61f9a8116e50a537d1"
+  integrity sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==
+
 copy-concurrently@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/copy-concurrently/-/copy-concurrently-1.0.5.tgz#92297398cae34937fcafd6ec8139c18051f0b5e0"
@@ -9805,12 +9810,13 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-next-page-tester@0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/next-page-tester/-/next-page-tester-0.15.0.tgz#a5de2ba6e6c3cde6e192a91a31752cd197a329ac"
-  integrity sha512-zgiqsFmvMDiZcN0PhefxIE4FdNIdkiQ0isR8jI8Or3+jKe3vugsKEOYY92LXQzbKkTJt9R2Gx4oMaNpBfgAODg==
+next-page-tester@0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/next-page-tester/-/next-page-tester-0.17.0.tgz#8cb0b6e787eff9dad08faf9838dce952cd1e81d6"
+  integrity sha512-avkDbs01wsXEcqr3gGDSr7vIofKdIzJdGLOxYGDDCsmO5KUaG9mzXNLdKY1d96MBAVQ1k+m8pFhezsI5Sthxhg==
   dependencies:
     "@types/express" "^4.17.8"
+    cookie "^0.4.1"
     fast-glob "^3.2.4"
     find-root "^1.1.0"
     node-mocks-http "^1.9.0"
