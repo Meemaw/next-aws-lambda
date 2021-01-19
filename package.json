@@ -27,7 +27,7 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
-    "ky": "0.25.1",
+    "ky": "0.26.0",
     "ky-universal": "0.8.2",
     "next": "10.0.5",
     "react": "17.0.1",
