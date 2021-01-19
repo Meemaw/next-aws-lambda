@@ -1,0 +1,31 @@
+{
+  "extends": ["config:base"],
+  "labels": ["dependencies", "automerge"],
+  "packageRules": [
+    {
+      "groupName": "monorepo:ky",
+      "packageNames": [
+        "ky",
+        "ky-universal"
+      ]
+    },
+    {
+      "groupName": "monorepo:eslint",
+      "packageNames": [
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "eslint",
+        "eslint-config-airbnb",
+        "eslint-config-prettier",
+        "eslint-config-import",
+        "eslint-plugin-jest",
+        "eslint-plugin-jsx-a11y",
+        "eslint-plugin-prettier",
+        "eslint-plugin-react",
+        "eslint-plugin-react-hooks",
+        "eslint-plugin-testcafe",
+        "eslint-plugin-testing-library"
+      ]
+    }
+  ]
+}
