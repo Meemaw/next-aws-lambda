@@ -1,31 +1,46 @@
 {
-  "extends": ["config:base"],
-  "labels": ["dependencies", "automerge"],
-  "packageRules": [
+	"extends": ["config:base"],
+	"labels": ["dependencies", "automerge"],
+	"packageRules": [
     {
-      "groupName": "monorepo:ky",
-      "packageNames": [
-        "ky",
-        "ky-universal"
-      ]
-    },
-    {
-      "groupName": "monorepo:eslint",
-      "packageNames": [
-        "@typescript-eslint/eslint-plugin",
-        "@typescript-eslint/parser",
-        "eslint",
-        "eslint-config-airbnb",
-        "eslint-config-prettier",
-        "eslint-config-import",
-        "eslint-plugin-jest",
-        "eslint-plugin-jsx-a11y",
-        "eslint-plugin-prettier",
-        "eslint-plugin-react",
-        "eslint-plugin-react-hooks",
-        "eslint-plugin-testcafe",
-        "eslint-plugin-testing-library"
-      ]
-    }
-  ]
+			"groupName": "monorepo:ky",
+			"packageNames": [
+				"ky",
+				"ky-universal"
+			]
+		},
+		{
+			"groupName": "monorepo:@testing-library",
+			"packageNames": [
+				"@testing-library/jest-dom",
+				"@testing-library/react",
+				"@testing-library/user-event"
+			]
+		},
+		{
+			"groupName": "monorepo:testcafe",
+			"packageNames": [
+				"testcafe",
+				"@testing-library/testcafe"
+			]
+		},
+		{
+			"groupName": "monorepo:eslint",
+			"packageNames": [
+				"@typescript-eslint/eslint-plugin",
+				"@typescript-eslint/parser",
+				"eslint",
+				"eslint-config-airbnb",
+				"eslint-config-prettier",
+				"eslint-config-import",
+				"eslint-plugin-jest",
+				"eslint-plugin-jsx-a11y",
+				"eslint-plugin-prettier",
+				"eslint-plugin-react",
+				"eslint-plugin-react-hooks",
+				"eslint-plugin-testcafe",
+				"eslint-plugin-testing-library"
+			]
+		}
+	]
 }
