@@ -9572,10 +9572,10 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-next-page-tester@0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/next-page-tester/-/next-page-tester-0.21.0.tgz#bb7dc0f0a36a6013e0e1ffa641b15accabfabc94"
-  integrity sha512-mLMUbTZ3L8VYzV0WiE3r0qhzSs0RfS9q3haBNKqKp8PKSGC2CnPaFl7n81+XiKSwEFpkGKyg8QjpVoF62Z9MtQ==
+next-page-tester@0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/next-page-tester/-/next-page-tester-0.21.1.tgz#cfc767a44a34b119cfa9f97e0d760670690d6fd6"
+  integrity sha512-Kr0nbi3tpxsPOCZXW6ZLGwxkFXjxt7ts1peymbCiWGkTbkXn98jeAmBsLrP44NN+wkH5HfwU8tKVoCy5tq/pwg==
   dependencies:
     "@types/express" "^4.17.8"
     cookie "^0.4.1"
