@@ -1,4 +1,4 @@
-FROM node:14-alpine as build
+FROM node:16-alpine as build
 
 COPY . /src
 WORKDIR /src
@@ -7,7 +7,7 @@ RUN yarn install --frozen-lockfile
 RUN yarn build
 RUN yarn install --frozen-lockfile --production --ignore-scripts --prefer-offline
 
-FROM node:14-alpine
+FROM node:16-alpine
 
 WORKDIR /usr/app
 
